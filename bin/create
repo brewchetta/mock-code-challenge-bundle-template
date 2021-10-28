@@ -3,7 +3,7 @@
 begin
   if (File.directory?('code-challenge') && File.directory?('code-challenge/.git'))
     puts "Creating bundle file..."
-    system("cd code-challenge && git branch -M main && git bundle create ../code-challenge.bundle HEAD main")
+    system("cd code-challenge && git branch -M main && git remote remove origin && git bundle create ../code-challenge.bundle HEAD main")
     puts "Removing unbundled files..."
     system("rm -rf code-challenge")
     puts "Removing template files"
