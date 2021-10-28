@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+begin
+  puts "Creating bundle file..."
+  system("cd code-challenge && bundle create ../code-challenge.bundle HEAD main")
+  puts "Removing unbundled files..."
+  system("rm -rf code-challenge")
+  puts "Removing template files"
+  system("rm README.md .git ./bin/create")
+  puts "Complete"
+rescue SystemExit
+  puts "There was an issue finding or bundling the code challenge..."
+end
