@@ -1,4 +1,4 @@
-# mock-code-challenge-bundle-template
+# Mock Code Challenge Bundler
 
 This is a tool developed to make it easier to bundle mock code challenges (or real ones) for the Flatiron School program.
 
@@ -10,4 +10,8 @@ From there you can use your own zipping tool to properly zip the directory and d
 
 ## Troubleshooting
 
-Please make sure the main branch is named to `main` as opposed to `master`. You can rename it with `git branch -M main`.
+Be sure that you've renamed the code challenge directory for students to `code-challenge` and that it's seated next to `bin` in the file structure.
+
+The `code-challenge` directory needs to be a repository initialized with `git`.
+
+During the bundling process, the git remote is removed and the main branch renamed to `main` from `master` if it wasn't before. This functionality is intentional.
