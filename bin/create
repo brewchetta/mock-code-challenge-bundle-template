@@ -1,13 +1,17 @@
 #!/usr/bin/env ruby
 
 begin
-  puts "Creating bundle file..."
-  system("cd code-challenge && bundle create ../code-challenge.bundle HEAD main")
-  puts "Removing unbundled files..."
-  system("rm -rf code-challenge")
-  puts "Removing template files"
-  system("rm README.md .git ./bin/create")
-  puts "Complete"
+  if (File.directory?('code-challenge') && File.directory?('code-challenge/.git'))
+    puts "Creating bundle file..."
+    system("cd code-challenge && git branch -M main && git bundle create ../code-challenge.bundle HEAD main")
+    puts "Removing unbundled files..."
+    system("rm -rf code-challenge")
+    puts "Removing template files"
+    system("rm -rf README.md .git ./bin/create")
+    puts "Complete"
+  else
+    puts "No git initialized 'code-challenge' directory found..."
+  end
 rescue SystemExit
   puts "There was an issue finding or bundling the code challenge..."
 end
