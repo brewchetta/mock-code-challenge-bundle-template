@@ -8,7 +8,7 @@ if __name__ == "__main__":
         print("Removing unbundled files...")
         os.system("rm -rf code-challenge")
         print("Removing template files")
-        os.system("rm -rf README.md .git ./bin/create")
+        os.system("rm -rf README.md .git ./bin/create.py")
         print("Code challenge ready!")
     else:
         print("No git initialized 'code-challenge' directory found...")
