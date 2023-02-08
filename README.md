@@ -12,7 +12,7 @@ From there you can use your own zipping tool to properly zip the directory and d
 
 ## Troubleshooting
 
-Be sure that you've renamed the code challenge directory for students to `code-challenge` and that it's seated next to `bin` in the file structure.
+Be sure that you've renamed the code challenge directory for students to `code-challenge` and that it's seated next to the `bin` directory.
 
 The `code-challenge` directory needs to be a repository initialized with `git`.
 
